@@ -1,0 +1,8 @@
+.Typewriter__cursor{
+    margin-left: 100px !important;
+    animation: none !important;
+    opacity: 0;
+}
+.MuiInputBase-input{
+    font-size: 24px !important;
+}
