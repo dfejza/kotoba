@@ -2,6 +2,8 @@ const fs = require('fs');
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+//temp
+const util = require('util')
 // Configuring body parser middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -21,7 +23,7 @@ app.post('/getTerm', (req, res) => {
         return false;
     });
     
-    console.log(arrayFound);
+    console.log(util.inspect(arrayFound, {showHidden: false, depth: null}))
     return res.send({res : arrayFound});
 });
 

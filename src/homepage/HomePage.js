@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography } from '@material-ui/core';
 import Typewriter from 'typewriter-effect';
-import SearchBar from './SearchBar.js'
-import SearchResults from './SearchResults.js'
+import Search from './search/Search.js'
 import './HomePage.css'
 
 const useStyles = makeStyles((theme) => ({
@@ -20,57 +19,13 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-const stubBackendApiCall = (searchTerm) => {
-    const exampleData = [
-        {
-            "kanji" : "言葉",
-            "furigana" : "【ことば】",
-            "phonetic" : "kotoba",
-            "type" : "adjective",
-            "definition" : "language, speech",
-            "example" : "言葉が で 出てこなかった。Words failed me."
-        },
-        {
-            "kanji" : "言葉",
-            "furigana" : "【ことば】",
-            "phonetic" : "kotoba",
-            "type" : "adjective",
-            "definition" : "language, speech",
-            "example" : "言葉が で 出てこなかった。Words failed me."
-        },
-        {
-            "kanji" : "言葉",
-            "furigana" : "【ことば】",
-            "phonetic" : "kotoba",
-            "type" : "adjective",
-            "definition" : "language, speech",
-            "example" : "言葉が で 出てこなかった。Words failed me."
-        }
-    ];
-    return exampleData;
-};
-
 
 function HomePage() {
     const classes = useStyles();
-    const [searchTerm, setSearchTerm] = useState("");
-    // todo have redux handle state
-    const [data, setData] = useState([]);
-
-    const searchBarHandler = (event) =>{
-        console.log(searchTerm);
-        let ret = stubBackendApiCall(searchTerm);
-        setData(ret);
-    };
     return (
         <div className={classes.content}>
             <TitleBar/>
-            <SearchBar
-                searchTerm={searchTerm}
-                setSearchTerm={setSearchTerm}
-                searchBarHandler={searchBarHandler}
-                />
-            <SearchResults data={data}/>
+            <Search />
         </div>
     );
 }
