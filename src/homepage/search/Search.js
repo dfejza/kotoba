@@ -4,7 +4,7 @@ import SearchResults from './SearchResults.js'
 import getTermV1 from './SearchApi'
 
 export default function Search(props){
-    const [searchTerm, setSearchTerm] = useState("");
+    const [searchTerm, setSearchTerm] = useState("家");
     // todo have redux handle state
     const [data, setData] = useState([]);
 

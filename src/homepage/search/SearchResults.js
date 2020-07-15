@@ -68,7 +68,7 @@ const DefinitionSubGroups = (props) => {
               {def.gloss.map((trans, idx) => {
                 return <React.Fragment key={idx}> {
                   trans.map((trans2, idx2) => { 
-                      return <React.Fragment key={idx2}> {trans2.text} </React.Fragment> 
+                      return <React.Fragment key={idx2}> {trans2.text} ;</React.Fragment> 
                     })} 
                   </React.Fragment>
               })}

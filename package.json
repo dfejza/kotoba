@@ -17,6 +17,7 @@
     "react-furi": "^1.1.0",
     "react-scripts": "3.4.1",
     "styled-components": "^5.1.1",
+    "trie-search": "^1.2.11",
     "typescript": "^3.9.6",
     "typewriter-effect": "^2.13.1"
   },
