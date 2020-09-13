@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-export default function SearchBar(props) {
+function SearchBar(props) {
     const classes = useStyles();
     const defaultSearchText = "Search in English, 日本語, or Romaji"
     return(
@@ -39,6 +39,7 @@ export default function SearchBar(props) {
                 variant="standard"
                 label=""
                 value={props.searchTerm}
+                onKeyDown={e => { if (e.key === 'Enter')  props.searchBarHandler();}}
                 onChange={e => props.setSearchTerm(e.target.value)}
                 placeholder={defaultSearchText}
                 InputProps={{ disableUnderline: true}}
@@ -54,3 +55,5 @@ export default function SearchBar(props) {
         </Paper>
     )
 }
+
+export default SearchBar;

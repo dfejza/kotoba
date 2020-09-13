@@ -37,7 +37,7 @@ function TitleBar() {
     const text3 = "kotoba.info - A Japanese Dictionary";
     
     return (
-        <Typography className={classes.title} variant="h4" component="h4">
+        <Typography className={classes.title} variant="h5" component="h5">
             {text}
             <Typewriter 
                 onInit={(typewriter) => {
