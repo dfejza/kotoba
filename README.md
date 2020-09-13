@@ -2,4 +2,4 @@
 English &lt;=> Japanese Dictionary
 
 # Progress Tracker
-https://trello.com/b/MjmiFYyB
+https://github.com/dfejza/kotoba/projects/1
